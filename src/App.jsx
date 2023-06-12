@@ -9,6 +9,7 @@ import ProductDetailInfo from "./ProductDetailInfo";
 import ProductDetailNutrition from "./ProductDetailNutrition";
 import ProductDetailStorage from "./ProductDetailStorage";
 import Cart from "./Cart";
+import Footer from "./Footer";
 
 function App() {
   const [cart, setCart] = useState(function () {
@@ -64,7 +65,8 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar cart={cart} />
-      <div className="container">
+      <div id="body" className="d-flex flex-column container-top-position">
+      <main className="container flex-grow">
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/about" element={<About />}></Route>
@@ -106,7 +108,9 @@ function App() {
           </Route>
           <Route path="/cart" element={<Cart cart={cart} />}></Route>
         </Routes>
+      </main>
       </div>
+      <Footer />
     </BrowserRouter>
   );
 }
