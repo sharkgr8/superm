@@ -4,7 +4,7 @@ import useFetch from "./useFetch";
 
 export default function ProductDetails(props) {
   const [product, setProduct] = useState({});
-  const { get } = useFetch("https://react-tutorial-demo.firebaseio.com/");
+  const { get } = useFetch("https://superm-a1834-default-rtdb.firebaseio.com/");
   const params = useParams();
 
   useEffect(() => {
